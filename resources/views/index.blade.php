@@ -20,22 +20,48 @@
             <div class="col-2">
                 <a href="/create" class="btn btn-success">Add New</a>
             </div>
+        <div class ="col-12">
+         <form action="">
+             <input type ="search" name="search" class="form-control" required>
+
+                <input required type="radio" name="by" value="title">Title
+                <input required type="radio" name="by" value="location">Location
+                <input required type="radio" name="by" value="description">Description
+                <button>Search</button>
+             </form>
+             <br>
+             <form action="">
+                 <input required type="date" name="date1" class="form-controls" required>
+                 <input required type="date" name="date2" class="form-controls" required>
+                 <button>Search by Date</button>
+             </form>
+              
+               <br>
+            <form action="">
+                <input required type="number" name="price1" class="form-controls" required>
+                <input required type="number" name="price2" class="form-controls" required>
+                <button>Search by Price</button>
+            </form>
+           </div>
+
+
             <div class="col-12 mt-5">
                 <table class="table">
                     <thead>
                         <tr>
                             
-                            <th scope="col">Ttile</th>
+                            <th scope="col">Title</th>
                             <th scope="col">Location</th>
                             <th scope="col">Date</th>
                             <th scope="col">Description</th>
                             <th scope="col">Entrance Fee</th> 
                             <th scope="col"></th> 
                         </tr>
-                   
+                  
                     </thead>
                     <tbody>
                         <!--$x is the -->
+                        
                         @foreach($data as $x)
                         <tr> 
                             <th scope="row">{{$x->title}}</th> 
@@ -49,8 +75,10 @@
                             </th> 
                         </tr>
                         @endforeach
+                  
                     </tbody>
                 </table>
+            
             </div>
         </div>
     </div>
